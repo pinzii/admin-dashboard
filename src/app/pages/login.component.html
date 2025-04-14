@@ -1,1 +1,32 @@
-<p>login works!</p>
+<div class="login-wrapper">
+  <div class="login-box">
+    <mat-card>
+      <div class="logo">
+        <mat-icon class="login-icon">sailing</mat-icon>
+      </div>
+      <h2>Iniciar sesión</h2>
+      <form (ngSubmit)="login()" #form="ngForm">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Correo electrónico</mat-label>
+          <mat-icon matPrefix>mail</mat-icon>
+          <input matInput type="email" required name="email" [(ngModel)]="email" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Contraseña</mat-label>
+          <mat-icon matPrefix>lock</mat-icon>
+          <input matInput type="password" required name="password" [(ngModel)]="password" />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Ingresar</button>
+      </form>
+    </mat-card>
+  </div>
+
+  <div class="login-welcome">
+    <div class="welcome-content">
+      <h1>Welcome.</h1>
+      <p>Conéctate y accede a tu panel de control.</p>
+    </div>
+  </div>
+</div>

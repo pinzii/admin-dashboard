@@ -1,0 +1,29 @@
+.register-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top left, #2a0845, #6441a5);
+  }
+  
+  mat-card {
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #1a1a2e;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+  }
+  

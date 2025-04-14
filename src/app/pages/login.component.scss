@@ -1,0 +1,72 @@
+:host {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1f36, #282c4b);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .login-wrapper {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+  
+  .login-box {
+    flex: 1;
+    padding: 3rem;
+    background-color: #151525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login-welcome {
+    flex: 1;
+    background: radial-gradient(circle at center, #7e3ff2, #38086d);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .welcome-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .welcome-content p {
+    font-size: 1.2rem;
+    color: #ddd;
+  }
+  
+  mat-card {
+    background-color: #1a1a2e;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: none;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  mat-icon {
+    color: #ff4081;
+  }
+  
+  button {
+    width: 100%;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
