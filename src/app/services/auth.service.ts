@@ -10,6 +10,8 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
+  
+
   login(email: string, password: string): Observable<any> {
     return this.http.get<any[]>(`${this.baseUrl}?email=${email}&password=${password}`).pipe(
       map(users => {
@@ -37,5 +39,22 @@ export class AuthService {
   private hasToken(): boolean {
     return !!localStorage.getItem('token');
   }
+
+  register(
+    username: string, 
+    email: string, 
+    password: string): Observable<any> {
+    const user = { 
+      username, 
+      email, 
+      password, 
+      token: this.generateToken() };
+    return this.http.post(this.baseUrl, user);
+  }
+  
+  private generateToken(): string {
+    return Math.random().toString(36).slice(2);
+  }
+  
 }
 

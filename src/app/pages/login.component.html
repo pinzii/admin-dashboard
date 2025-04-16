@@ -5,20 +5,24 @@
         <mat-icon class="login-icon">sailing</mat-icon>
       </div>
       <h2>Iniciar sesión</h2>
-      <form (ngSubmit)="login()" #form="ngForm">
-        <mat-form-field appearance="fill" class="full-width">
+      <form (ngSubmit)="login()" #form="ngForm" class="login-form">
+        <mat-form-field appearance="fill" class="full-width" [class.invalid]="emailInput.invalid && emailInput.touched">
           <mat-label>Correo electrónico</mat-label>
           <mat-icon matPrefix>mail</mat-icon>
-          <input matInput type="email" required name="email" [(ngModel)]="email" />
+          <input matInput type="email" required name="email" [(ngModel)]="email" #emailInput="ngModel"/>
+          <mat-error *ngIf="emailInput.hasError('required')">El correo es obligatorio.</mat-error>
+          <mat-error *ngIf="emailInput.hasError('email')">Ingresa un correo válido.</mat-error>
         </mat-form-field>
 
-        <mat-form-field appearance="fill" class="full-width">
+        <mat-form-field appearance="fill" class="full-width" [class.invalid]="passwordInput.invalid && passwordInput.touched">
           <mat-label>Contraseña</mat-label>
           <mat-icon matPrefix>lock</mat-icon>
-          <input matInput type="password" required name="password" [(ngModel)]="password" />
+          <input matInput type="password" required name="password" [(ngModel)]="password" #passwordInput="ngModel" minlength="4"/>
+          <mat-error *ngIf="passwordInput.hasError('required')">La contraseña es obligatoria.</mat-error>
+          <mat-error *ngIf="passwordInput.hasError('minlength')">Debe tener al menos 4 caracteres.</mat-error>
         </mat-form-field>
 
-        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Ingresar</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" >Ingresar</button>
       </form>
     </mat-card>
   </div>

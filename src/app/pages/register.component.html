@@ -5,17 +5,33 @@
       <form (ngSubmit)="register()" #form="ngForm">
         <mat-form-field appearance="fill" class="full-width">
           <mat-label>Nombre de usuario</mat-label>
-          <input matInput required name="username" [(ngModel)]="username" />
+          <input matInput required name="username" [(ngModel)]="username" #usernameInput="ngModel" />
+          <mat-error *ngIf="usernameInput.invalid && usernameInput.touched" class="error-text">
+            El nombre es obligatorio.
+          </mat-error>
         </mat-form-field>
   
         <mat-form-field appearance="fill" class="full-width">
           <mat-label>Correo electrónico</mat-label>
-          <input matInput type="email" required name="email" [(ngModel)]="email" />
+          <input 
+          matInput 
+          type="email" 
+          required 
+          name="email" 
+          email
+          [(ngModel)]="email" 
+           #emailInput="ngModel" />
+          <mat-error *ngIf="emailInput.invalid && emailInput.touched" class="error-text">
+            Ingresa un correo válido.
+          </mat-error>
         </mat-form-field>
   
         <mat-form-field appearance="fill" class="full-width">
           <mat-label>Contraseña</mat-label>
-          <input matInput type="password" required name="password" [(ngModel)]="password" />
+          <input matInput type="password" required name="password" [(ngModel)]="password" minlength="4" #passwordInput="ngModel" />
+          <mat-error *ngIf="passwordInput.invalid && passwordInput.touched" class="error-text">
+            La contraseña debe tener al menos 4 caracteres.
+          </mat-error>
         </mat-form-field>
   
         <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Registrarse</button>

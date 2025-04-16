@@ -1,16 +1,23 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "admin@example.com",
       "password": "admin123",
       "token": "admin-token"
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "user@example.com",
       "password": "user123",
       "token": "user-token"
+    },
+    {
+      "id": "8b78",
+      "username": "Felipe",
+      "email": "felipe@ejemplo.com",
+      "password": "1234",
+      "token": "4fa3qczeqv"
     }
   ]
 }
