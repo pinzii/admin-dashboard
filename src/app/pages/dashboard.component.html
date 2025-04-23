@@ -1,0 +1,10 @@
+<div class="dashboard-kpis">
+    <mat-card *ngFor="let kpi of kpis" class="kpi-card">
+      <mat-icon>{{ kpi.icon }}</mat-icon>
+      <div class="kpi-content">
+        <h3>{{ kpi.value }}</h3>
+        <p>{{ kpi.title }}</p>
+      </div>
+    </mat-card>
+  </div>
+  

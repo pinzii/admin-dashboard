@@ -1,0 +1,37 @@
+.dashboard-kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .kpi-card {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a2e;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 8px rgba(24, 2, 2, 0.455);
+  
+    mat-icon {
+      font-size: 25px;      
+      color: #7e3ff2;
+      flex-shrink: 0;
+    }
+  
+    .kpi-content {
+      h3 {
+        margin: 0;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+  
+      p {
+        margin: 0;
+        color: #ccc;
+        text-align: center;
+      }
+    }
+  }
+  
