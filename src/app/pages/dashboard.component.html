@@ -7,4 +7,38 @@
       </div>
     </mat-card>
   </div>
+
+  <mat-card class="data-table-card">
+    <h3>Usuarios recientes</h3>
+    <table mat-table [dataSource]="users" class="mat-elevation-z8">
+  
+      <!-- Columna ID -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let user"> {{user.id}} </td>
+      </ng-container>
+  
+      <!-- Columna Nombre -->
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let user"> {{user.nombre}} </td>
+      </ng-container>
+  
+      <!-- Columna Correo -->
+      <ng-container matColumnDef="correo">
+        <th mat-header-cell *matHeaderCellDef> Correo </th>
+        <td mat-cell *matCellDef="let user"> {{user.correo}} </td>
+      </ng-container>
+  
+      <!-- Cabecera y filas -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card>
+
+  <mat-card class="chart-card">
+    <h3>Estadísticas</h3>
+    <app-stat-chart></app-stat-chart>
+  </mat-card>
+  
   
