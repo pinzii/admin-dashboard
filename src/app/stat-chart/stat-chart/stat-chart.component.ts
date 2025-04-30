@@ -25,6 +25,6 @@ view: [number, number] = [600,300];
     name: 'myScheme',           
     selectable: true,          
     group: ScaleType.Ordinal,       
-    domain: ['#3e3ff2', '#4e54c8', '#6441a5']
+    domain: ['#8e3ff2', '#4e54c8', '#6441a5']
   };
 }

@@ -29,16 +29,16 @@
   
   mat-nav-list a {
     display: flex;
-    align-items: center;
+    align-items: center;    
     padding: 12px 20px;
-    margin: 5px 10px;
-    border-radius: 8px;
+    margin: 5px 1px;
+    border-radius: 85px;
     transition: background-color 0.3s ease;
   }
   
   mat-nav-list a mat-icon {
     margin-right: 12px;
-    font-size: 20px;
+    font-size: 26px;
   }
 
   mat-nav-list a:hover {
@@ -70,7 +70,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    background-color: #1a1a2e;
+    background-color: #1e1e2f;
   }
   
   .logo-image {
