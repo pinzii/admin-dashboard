@@ -10,10 +10,21 @@
 <mat-sidenav-container class="main-container">
 
     <mat-sidenav mode="side" opened class="side-nav">
+      <div class="logo-container">
+        <img src="assets/img/admin.png" alt="AdminPanel Logo" class="logo-image">
+      </div>
       <mat-nav-list>
-        <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link">
+        
+        <a mat-list-item 
+          routerLink="/dashboard" 
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }">
           <mat-icon>dashboard</mat-icon>
-          <span>Dashboard</span>
+          <span>Dashboard</span>          
+        </a>
+        <a mat-list-item routerLink="/dashboard/reports" routerLinkActive="active-link">
+          <mat-icon>bar_chart</mat-icon>
+          <span>Reportes</span>
         </a>
         <!-- puedes agregar más links aquí -->
       </mat-nav-list>
