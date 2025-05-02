@@ -1,0 +1,19 @@
+<mat-card class="edit-profile-card">
+  <h2>Editar Perfil</h2>
+
+  <form (ngSubmit)="guardarCambios()" #form="ngForm">
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="user.username" name="username" required />
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="user.email" name="email" required />
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" type="submit">
+      Guardar cambios
+    </button>
+  </form>
+</mat-card>

@@ -19,15 +19,18 @@
   
   .main-container {
     height: calc(100vh - 64px); // 64px es la altura del toolbar
+    overflow-x: hidden;
   }
   
   .side-nav {
     width: 220px;
     background-color: #1e1e2f;
     color: #fff;
+    overflow-x: hidden;
   }
   
   mat-nav-list a {
+    width: 99%;
     display: flex;
     align-items: center;    
     padding: 12px 20px;
@@ -54,7 +57,7 @@
     background-color: #7e3ff2;
     color: white;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 85px;
     padding-left: 20px;
   }
   

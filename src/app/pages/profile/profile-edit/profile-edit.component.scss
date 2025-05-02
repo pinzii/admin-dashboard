@@ -1,0 +1,49 @@
+.edit-profile-card {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #1a1a2e;
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  
+    h2 {
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+    }
+  
+    .form-field {
+      margin-bottom: 20px;
+  
+      ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+        background-color: #24243e;
+        border-radius: 6px;
+      }
+  
+      ::ng-deep .mat-form-field-label {
+        color: #aaa;
+      }
+  
+      ::ng-deep .mat-input-element {
+        color: white;
+      }
+    }
+  
+    button {
+      display: block;
+      margin: 0 auto;
+      background-color: #7e3ff2;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #5b29b6;
+      }
+    }
+  }
+  

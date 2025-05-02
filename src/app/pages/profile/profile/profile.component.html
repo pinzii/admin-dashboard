@@ -1,1 +1,24 @@
-<p>profile works!</p>
+<mat-card class="profile-card">
+    <div class="avatar-container">
+      <img [src]="user.fotoUrl" alt="Avatar" class="profile-avatar" />
+    </div>
+  
+    <h2 class="profile-title">
+      <mat-icon class="icon">person</mat-icon>
+      {{ user.username }}
+    </h2>
+  
+    <div class="profile-info">
+      <div class="info-row">
+        <mat-icon class="icon">mail</mat-icon>
+        <span>{{ user.email }}</span>
+      </div>
+    </div>
+
+    <div class="profile-actions">
+        <button mat-icon-button color="accent" [routerLink]="['/dashboard/profile/edit']" class="edit-icon-button">
+          <mat-icon>edit</mat-icon>
+        </button>
+    </div>
+</mat-card>
+  
