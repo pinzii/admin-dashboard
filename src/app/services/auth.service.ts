@@ -18,6 +18,7 @@ export class AuthService {
         if (users.length > 0) {
           const user = users[0];
           localStorage.setItem('token', user.token);
+          localStorage.setItem('id', user.id.toString());
           localStorage.setItem('username', user.username);
           localStorage.setItem('email', user.email);
 

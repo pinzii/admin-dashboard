@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -25,13 +26,14 @@ import { MatButtonModule } from '@angular/material/button';
 export class ProfileEditComponent {
 
   user = {
+    id: localStorage.getItem('id'),
     username: localStorage.getItem('username') || '',
     email: localStorage.getItem('email') || ''
   };
   
   profileForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.profileForm = this.fb.group({
       username: [localStorage.getItem('username') || '', Validators.required],
       email: [localStorage.getItem('email') || '', [Validators.required, Validators.email]]
@@ -48,8 +50,23 @@ export class ProfileEditComponent {
   }
 
   guardarCambios() {
-    localStorage.setItem('username', this.user.username);
-    localStorage.setItem('email', this.user.email);
-    alert('Cambios guardados correctamente');
+    const updatedUser = {
+      username: this.user.username,
+      email: this.user.email
+    };
+   
+    const userId = localStorage.getItem('id');
+  
+    this.http.patch(`http://localhost:3000/users/${userId}`, updatedUser).subscribe({
+      next: () => {
+        
+        localStorage.setItem('username', this.user.username);
+        localStorage.setItem('email', this.user.email);
+        alert('Cambios guardados y actualizados en la base de datos');
+      },
+      error: () => {
+        alert('Error al guardar en la base de datos');
+      }
+    });
   }
 }
