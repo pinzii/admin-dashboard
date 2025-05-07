@@ -1,59 +1,81 @@
 # AdminDashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+Este proyecto es una plataforma administrativa construida con Angular, utilizando una arquitectura standalone y buenas prácticas modernas. Incluye autenticación, rutas protegidas, visualización de datos, gráficos, un perfil de usuario y un diseño moderno con Angular Material.
 
-## Development server
+## ✨ Características principales
 
-To start a local development server, run:
+- Login y registro con validaciones visuales.
+- Gestión de sesión con `BehaviorSubject`.
+- Dashboard con tarjetas KPI, tabla de usuarios y gráfico estadístico.
+- Rutas protegidas con `AuthGuard`.
+- Módulo de perfil de usuario con edición.
+- Estilo moderno y responsive con Angular Material.
+- Fake backend con `json-server` y persistencia en `db.json`.
+
+## 🚀 Instalación
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/tu_usuario/admin-dashboard.git
+cd admin-dashboard
+```
+
+2. Instalar dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecutar el servidor JSON (en otra terminal):
+
+```bash
+npx json-server --watch db.json
+```
+
+4. Ejecutar la app Angular:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Accede desde tu navegador en `http://localhost:4200/`.
 
-## Code scaffolding
+## 🛠️ Scripts útiles
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `ng generate component pages/nombre --standalone --flat --skip-tests` → Crea un componente standalone sin subcarpetas.
+- `npx json-server --watch db.json` → Inicia backend simulado.
 
-```bash
-ng generate component component-name
+## 🧠 Conocimientos aplicados
+
+- Angular Standalone Components
+- Reactive Forms y Template Forms
+- Material Design
+- Observables y programación reactiva
+- HttpClient para comunicación con API
+- Routing y lazy loading
+- LocalStorage y persistencia de sesión
+
+## 📁 Estructura del proyecto
+
+```
+src/
+├── app/
+│   ├── pages/
+│   ├── layout/
+│   ├── services/
+│   ├── app.routes.ts
+│   ├── app.config.ts
+│   └── main.ts
+├── assets/
+│   └── img/
+└── db.json
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📷 Capturas de pantalla
 
-```bash
-ng generate --help
-```
+Puedes agregar capturas de cada vista en la carpeta `/assets/img`.
 
-## Building
+---
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desarrollado por [Felipe Pinzón Ruiz]. ¡Gracias por visitar el proyecto!
