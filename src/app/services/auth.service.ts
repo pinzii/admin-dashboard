@@ -5,7 +5,7 @@ import { tap, map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private baseUrl = 'http://localhost:3000/users';
+  private baseUrl = 'https://admin-dashboard-api-ahjz.onrender.com/users';
   private authStatus = new BehaviorSubject<boolean>(this.hasToken());
 
   constructor(private http: HttpClient) {}
